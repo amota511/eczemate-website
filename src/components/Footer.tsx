@@ -8,9 +8,7 @@ export default function Footer() {
           {/* Logo & tagline */}
           <div>
             <Link href="/" className="flex items-center gap-2.5 mb-3">
-              <div className="w-8 h-8 rounded-xl bg-sage-500 flex items-center justify-center">
-                <img src="/face-icon.svg" alt="Eczemate" className="w-5 h-5" />
-              </div>
+              <img src="/icon.png" alt="Eczemate" className="w-8 h-8 rounded-xl" />
               <span className="font-display font-bold text-xl tracking-tight text-sage-500">
                 eczemate
               </span>

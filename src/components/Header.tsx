@@ -7,9 +7,7 @@ export default function Header() {
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-xl bg-sage-500 flex items-center justify-center shadow-sm">
-            <img src="/face-icon.svg" alt="Eczemate" className="w-6 h-6" />
-          </div>
+          <img src="/icon.png" alt="Eczemate" className="w-9 h-9 rounded-xl shadow-sm" />
           <span className="font-display font-bold text-2xl tracking-tight text-sage-500">
             eczemate
           </span>
