@@ -94,6 +94,19 @@ export default function PrivacyPolicy() {
                   potential reactions or triggers.
                 </li>
                 <li>
+                  <strong>Treatments:</strong> Information about treatments you
+                  add to the App, including treatment name, type (topical,
+                  oral, or other), frequency, and reminder preferences.
+                </li>
+                <li>
+                  <strong>Routine Data:</strong> If you use the routine feature,
+                  we collect your daily skincare routine items (medications,
+                  products, and notes), completion status, adherence history,
+                  and any block-level notes you add. We also store your
+                  routine reminder preferences (morning and night reminder
+                  times).
+                </li>
+                <li>
                   <strong>User Preferences:</strong> Settings, notification
                   preferences, and customization options you select within the
                   App.
@@ -117,8 +130,7 @@ export default function PrivacyPolicy() {
                 <li>
                   <strong>Device Information:</strong> Device type, model,
                   manufacturer, operating system type and version, unique device
-                  identifiers, mobile network information, and phone number
-                  (where applicable).
+                  identifiers, and mobile network information.
                 </li>
                 <li>
                   <strong>Location Data:</strong> With your explicit permission,
@@ -214,12 +226,13 @@ export default function PrivacyPolicy() {
                 </li>
                 <li>
                   <strong>Subscription Management:</strong> To process and
-                  manage your Eczemate Plus subscription, including billing,
+                  manage your Eczemate Pro subscription, including billing,
                   renewals, and access to premium features.
                 </li>
                 <li>
-                  <strong>Notifications:</strong> To send you symptom tracking
-                  reminders, flare risk alerts, educational content, and
+                  <strong>Notifications:</strong> To send you local push
+                  notifications including daily routine reminders (morning and
+                  night), symptom tracking reminders, flare risk alerts, and
                   service-related announcements.
                 </li>
                 <li>
@@ -481,7 +494,7 @@ export default function PrivacyPolicy() {
                 version
               </p>
               <p>
-                <strong>Purpose:</strong> Manage Eczemate Plus subscriptions,
+                <strong>Purpose:</strong> Manage Eczemate Pro subscriptions,
                 process in-app purchases, verify purchase status, provide access
                 to premium features
               </p>
@@ -575,7 +588,7 @@ export default function PrivacyPolicy() {
                 details (handled directly by Apple/Google, not visible to us)
               </p>
               <p>
-                <strong>Purpose:</strong> Process Eczemate Plus subscriptions and
+                <strong>Purpose:</strong> Process Eczemate Pro subscriptions and
                 in-app purchases
               </p>
               <p>
@@ -910,9 +923,10 @@ export default function PrivacyPolicy() {
                 </li>
                 <li>
                   <strong>Right to Export:</strong> You can export your complete
-                  data record in machine-readable format (JSON) through Settings
-                  &gt; Privacy &amp; Data &gt; Export My Data. This includes all
-                  symptom logs, photos, product scans, and settings.
+                  data record as a PDF report delivered to your email through
+                  Settings &gt; Privacy &amp; Data &gt; Export My Data. This
+                  includes symptom logs, photos, treatments, food logs,
+                  product scans, and settings.
                 </li>
                 <li>
                   <strong>Right to Withdraw Consent:</strong> Where processing
@@ -1019,10 +1033,9 @@ export default function PrivacyPolicy() {
                 </li>
                 <li>
                   <strong>Right to Data Portability:</strong> You have the right
-                  to receive your personal data in a structured, commonly used,
-                  and machine-readable format and to transmit that data to
-                  another controller. Use the Export My Data feature in Settings
-                  to receive your data in JSON format.
+                  to receive your personal data in a structured format. Use the
+                  Export My Data feature in Settings to receive a comprehensive
+                  PDF report of your data delivered to your email.
                 </li>
                 <li>
                   <strong>Right to Object:</strong> You have the right to object

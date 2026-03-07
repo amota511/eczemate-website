@@ -69,9 +69,10 @@ export default function TermsOfUse() {
                   eczema symptoms, severity, and affected body areas
                 </li>
                 <li>
-                  <strong>Flare-Up Prediction:</strong> Algorithmic analysis to
-                  estimate the likelihood of future eczema flare-ups based on
-                  your tracked data and environmental factors
+                  <strong>Flare-Up Prediction:</strong> Rule-based analysis to
+                  estimate the likelihood of eczema flare-ups based on
+                  environmental factors (weather, humidity, air quality) and
+                  your recent symptom trends
                 </li>
                 <li>
                   <strong>Product Scanning:</strong> Scan product barcodes to
@@ -88,6 +89,12 @@ export default function TermsOfUse() {
                   time
                 </li>
                 <li>
+                  <strong>Treatment &amp; Routine Tracking:</strong> Create and
+                  manage daily skincare routines with medications, products,
+                  and notes, track adherence, and set morning and night
+                  reminders
+                </li>
+                <li>
                   <strong>Educational Content:</strong> Access articles,
                   resources, and information about eczema management
                 </li>
@@ -100,14 +107,14 @@ export default function TermsOfUse() {
               </p>
               <ul>
                 <li>
-                  <strong>Free Tier:</strong> Basic symptom tracking and
-                  limited access to certain features
+                  <strong>Free Tier:</strong> Symptom tracking, flare-up
+                  predictions, routine and treatment tracking, product
+                  scanning, and limited AI-powered analyses
                 </li>
                 <li>
-                  <strong>Eczemate Plus (Premium Subscription):</strong> Full
-                  access to all features including unlimited photo storage,
-                  advanced flare predictions, detailed product scanning,
-                  AI-powered skin analysis, and comprehensive food analysis
+                  <strong>Eczemate Pro (Premium Subscription):</strong> Everything
+                  in the free tier plus unlimited AI-powered analyses for
+                  skin photos, product ingredients, and food items
                 </li>
               </ul>
             </Section>
@@ -239,10 +246,6 @@ export default function TermsOfUse() {
                   Apple ID (iOS devices)
                 </li>
                 <li>
-                  <strong>Google Sign In:</strong> Authentication through your
-                  Google account (Android devices)
-                </li>
-                <li>
                   <strong>Guest/Anonymous Accounts:</strong> Limited
                   functionality without full registration
                 </li>
@@ -310,7 +313,7 @@ export default function TermsOfUse() {
 
             <Section title="5. Subscriptions and Billing">
               <p>
-                Eczemate Plus is a premium subscription service that provides
+                Eczemate Pro is a premium subscription service that provides
                 access to additional features beyond the free tier. All
                 subscriptions are processed through the Apple App Store (for
                 iOS) or Google Play Store (for Android), and are subject to the
@@ -321,7 +324,7 @@ export default function TermsOfUse() {
                 <strong>Subscription Plans:</strong>
               </p>
               <p>
-                Eczemate Plus is available in the following subscription durations:
+                Eczemate Pro is available in the following subscription durations:
               </p>
               <ul>
                 <li>Monthly subscription (auto-renewable)</li>
@@ -336,14 +339,14 @@ export default function TermsOfUse() {
                 <strong>Free Trial:</strong>
               </p>
               <p>
-                New subscribers to Eczemate Plus are eligible for a 3-day free
+                New subscribers to Eczemate Pro are eligible for a 3-day free
                 trial. During the trial period, you will have full access to
-                all Eczemate Plus features at no charge. Important trial terms:
+                all Eczemate Pro features at no charge. Important trial terms:
               </p>
               <ul>
                 <li>
                   The free trial is available to new subscribers only (users
-                  who have not previously subscribed to Eczemate Plus)
+                  who have not previously subscribed to Eczemate Pro)
                 </li>
                 <li>
                   You must provide valid payment information to start the free
@@ -406,7 +409,7 @@ export default function TermsOfUse() {
                 time. Price changes will take effect at the start of the next
                 subscription period following notice of the price change. We
                 will provide reasonable advance notice of any price increases.
-                Your continued use of Eczemate Plus after a price change
+                Your continued use of Eczemate Pro after a price change
                 constitutes your agreement to pay the modified price.
               </p>
               <p>
@@ -424,7 +427,7 @@ export default function TermsOfUse() {
                 <li>Open the Settings app on your device</li>
                 <li>Tap your name at the top</li>
                 <li>Tap Subscriptions</li>
-                <li>Tap the Eczemate Plus subscription</li>
+                <li>Tap the Eczemate Pro subscription</li>
                 <li>Tap Cancel Subscription</li>
               </ul>
               <p>
@@ -434,7 +437,7 @@ export default function TermsOfUse() {
                 <li>Open the Google Play Store app</li>
                 <li>Tap your profile icon</li>
                 <li>Tap Payments &amp; subscriptions &gt; Subscriptions</li>
-                <li>Select the Eczemate Plus subscription</li>
+                <li>Select the Eczemate Pro subscription</li>
                 <li>Tap Cancel subscription</li>
               </ul>
               <p>
@@ -444,7 +447,7 @@ export default function TermsOfUse() {
               </p>
               <p>
                 <strong>Effect of Cancellation:</strong> If you cancel your
-                subscription, you will retain access to Eczemate Plus features
+                subscription, you will retain access to Eczemate Pro features
                 until the end of your current billing period. After that, your
                 account will revert to the free tier and you will lose access
                 to premium features. No partial refunds will be provided for
@@ -502,7 +505,8 @@ export default function TermsOfUse() {
                 <li>Photographs of your skin</li>
                 <li>Product scan history</li>
                 <li>Food logs and dietary information</li>
-                <li>Notes and journal entries</li>
+                <li>Treatments and skincare routine data</li>
+                <li>Routine adherence and completion history</li>
                 <li>
                   Any other information or content you provide (collectively,
                   &quot;User Content&quot;)
@@ -935,7 +939,7 @@ export default function TermsOfUse() {
               </p>
               <p>
                 For complete details about our privacy practices, please review
-                our Privacy Policy at [link to privacy policy].
+                our <a href="/privacy" className="underline hover:text-sage-950">Privacy Policy</a>.
               </p>
             </Section>
 
@@ -1314,7 +1318,7 @@ export default function TermsOfUse() {
               </p>
               <ul>
                 <li>
-                  Your access to the App and Eczemate Plus features will
+                  Your access to the App and Eczemate Pro features will
                   immediately cease
                 </li>
                 <li>
@@ -1322,7 +1326,7 @@ export default function TermsOfUse() {
                   (subject to backup retention periods)
                 </li>
                 <li>
-                  If you have an active Eczemate Plus subscription, you must
+                  If you have an active Eczemate Pro subscription, you must
                   separately cancel it through your app store account to avoid
                   future charges
                 </li>

@@ -42,7 +42,7 @@ export default function Hero() {
               id="download"
             >
               <a
-                href="#"
+                href="https://apps.apple.com/us/app/eczemate-eczema-skin-wellness/id6759606605"
                 className="group inline-flex items-center justify-center sm:justify-start gap-3 bg-sage-950 text-white px-6 py-4 rounded-[var(--radius-button)] hover:bg-sage-800 transition-all shadow-lg shadow-sage-950/10 hover:shadow-xl hover:shadow-sage-950/15 hover:-translate-y-0.5"
               >
                 <svg

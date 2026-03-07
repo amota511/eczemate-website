@@ -34,7 +34,7 @@ export default function CTA() {
         {/* Store CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#"
+            href="https://apps.apple.com/us/app/eczemate-eczema-skin-wellness/id6759606605"
             className="group inline-flex items-center justify-center gap-3 bg-white text-sage-950 px-7 py-4 rounded-[var(--radius-button)] hover:bg-sage-50 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
