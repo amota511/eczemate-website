@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useMemo } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { RoundedBox, Environment } from "@react-three/drei";
 import * as THREE from "three";
@@ -67,6 +67,27 @@ export default function PhoneMockup({
   rotation = [0.1, -0.2, 0],
   className = "",
 }: PhoneMockupProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 1024);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  if (isMobile) {
+    return (
+      <div className={`w-full h-full flex items-center justify-center ${className}`}>
+        <img
+          src={screenTexturePath}
+          alt="App screenshot"
+          className="w-auto h-4/5 rounded-3xl shadow-2xl shadow-sage-950/20"
+        />
+      </div>
+    );
+  }
+
   return (
     <div className={`w-full h-full ${className}`}>
       <Canvas

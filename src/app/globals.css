@@ -125,3 +125,14 @@ body {
 .link-underline:hover::after {
   width: 100%;
 }
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .blob, .blob-reverse {
+    animation: none;
+  }
+
+  .gradient-mesh {
+    animation: none;
+  }
+}
