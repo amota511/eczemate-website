@@ -26,7 +26,7 @@ const features = [
     title: "Scan Products",
     description:
       "Point your camera at any product. Instantly see ingredient analysis, risk flags, and whether it's safe for eczema-prone skin.",
-    screenshot: "/screenshots/scan.png",
+    screenshot: "/screenshots/scan.jpg",
     accent: "text-violet-600",
     bg: "bg-violet-50",
   },
