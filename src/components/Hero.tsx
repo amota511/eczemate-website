@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { AnimatedHeadline, FadeUp } from "./AnimatedText";
-import PhoneMockup from "@/components/PhoneMockup";
 
 export default function Hero() {
   return (
@@ -72,8 +71,8 @@ export default function Hero() {
           {/* Right — Phone */}
           <motion.div
             className="relative flex items-center justify-center"
-            initial={{ opacity: 0, y: 60, rotateY: -10 }}
-            animate={{ opacity: 1, y: 0, rotateY: 0 }}
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 1,
               type: "spring",
@@ -82,7 +81,12 @@ export default function Hero() {
               delay: 0.3,
             }}
           >
-            <PhoneMockup screenTexturePath="/screenshots/routine.png" />
+            <img
+              src="/screenshots/phone-routine.png"
+              alt="Eczemate app home screen"
+              className="w-[280px] sm:w-[300px] h-auto"
+              loading="eager"
+            />
           </motion.div>
         </div>
       </div>

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { AnimatedHeadline, FadeUp } from "./AnimatedText";
-import PhoneMockup from "@/components/PhoneMockup";
 
 export default function CTA() {
   return (
@@ -68,7 +67,12 @@ export default function CTA() {
               stiffness: 80,
             }}
           >
-            <PhoneMockup screenTexturePath="/screenshots/routine.png" size="sm" />
+            <img
+              src="/screenshots/phone-routine.png"
+              alt="Eczemate app home screen"
+              className="w-[240px] sm:w-[260px] h-auto"
+              loading="lazy"
+            />
           </motion.div>
         </div>
       </div>

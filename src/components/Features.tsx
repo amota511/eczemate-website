@@ -9,7 +9,7 @@ const features = [
     title: "Predict Flare-Ups",
     description:
       "AI-powered forecasting that combines weather data, humidity, and your personal patterns to warn you before a flare strikes.",
-    screenshot: "/screenshots/predict.png",
+    phone: "/screenshots/phone-predict.png",
     accent: "text-amber-600",
     bg: "bg-amber-50",
   },
@@ -17,7 +17,7 @@ const features = [
     title: "Track Your Skin",
     description:
       "Log symptoms, food, products, and wellbeing daily. See 7-day trends and discover what's working — and what's triggering flares.",
-    screenshot: "/screenshots/track.png",
+    phone: "/screenshots/phone-track.png",
     accent: "text-sage-600",
     bg: "bg-sage-50",
   },
@@ -25,7 +25,7 @@ const features = [
     title: "Scan Products",
     description:
       "Point your camera at any product. Instantly see ingredient analysis, risk flags, and whether it's safe for eczema-prone skin.",
-    screenshot: "/screenshots/scan.jpg",
+    phone: "/screenshots/phone-scan.png",
     accent: "text-violet-600",
     bg: "bg-violet-50",
   },
@@ -33,7 +33,7 @@ const features = [
     title: "Build Your Routine",
     description:
       "Morning and evening routines with gentle check-ins. No streaks, no guilt — just a calm structure that helps your skin heal.",
-    screenshot: "/screenshots/routine.png",
+    phone: "/screenshots/phone-routine.png",
     accent: "text-sky-600",
     bg: "bg-sky-50",
   },
@@ -46,12 +46,11 @@ export default function Features() {
     offset: ["start start", "end end"],
   });
 
-  // Map scroll progress to active feature index (0-3)
   const activeIndex = useTransform(scrollYProgress, [0, 1], [0, 3]);
 
   return (
     <section id="features" className="relative bg-surface">
-      {/* Section header — scrolls normally before the pinned area */}
+      {/* Section header */}
       <div className="max-w-7xl mx-auto px-6 pt-32 pb-16 text-center">
         <FadeUp>
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-sage-200 bg-white/60 backdrop-blur-sm mb-6">
@@ -73,7 +72,7 @@ export default function Features() {
         </FadeUp>
       </div>
 
-      {/* Pinned scroll area — 400vh tall to give scroll room for 4 features */}
+      {/* Pinned scroll area */}
       <div ref={containerRef} className="relative h-[400vh]">
         <div className="sticky top-0 h-screen flex items-center overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 w-full">
@@ -90,43 +89,17 @@ export default function Features() {
                 ))}
               </div>
 
-              {/* Right — Phone with crossfading screenshots */}
-              <div className="relative h-[500px] sm:h-[600px] hidden lg:flex items-center justify-center">
-                <div
-                  className="relative w-[280px] sm:w-[300px]"
-                  style={{ perspective: "1000px" }}
-                >
-                  <div
-                    className="relative bg-[#1a1a1a] rounded-[3rem] p-[10px] shadow-2xl shadow-sage-950/30"
-                    style={{
-                      transform: "rotateY(-6deg) rotateX(2deg)",
-                      transformStyle: "preserve-3d",
-                    }}
-                  >
-                    {/* Dynamic Island */}
-                    <div className="absolute top-[18px] left-1/2 -translate-x-1/2 w-[90px] h-[28px] bg-black rounded-full z-10" />
-
-                    {/* Screen with crossfading images */}
-                    <div className="relative rounded-[2.4rem] overflow-hidden bg-black">
-                      {features.map((feature, index) => (
-                        <FeatureScreenImage
-                          key={feature.title}
-                          screenshot={feature.screenshot}
-                          index={index}
-                          progress={activeIndex}
-                          isFirst={index === 0}
-                        />
-                      ))}
-                    </div>
-
-                    {/* Side button (power) */}
-                    <div className="absolute -right-[3px] top-[120px] w-[3px] h-[60px] bg-[#2a2a2a] rounded-r-sm" />
-
-                    {/* Side buttons (volume) */}
-                    <div className="absolute -left-[3px] top-[100px] w-[3px] h-[35px] bg-[#2a2a2a] rounded-l-sm" />
-                    <div className="absolute -left-[3px] top-[145px] w-[3px] h-[35px] bg-[#2a2a2a] rounded-l-sm" />
-                  </div>
-                </div>
+              {/* Right — Crossfading phone images */}
+              <div className="relative hidden lg:flex items-center justify-center">
+                {features.map((feature, index) => (
+                  <FeaturePhone
+                    key={feature.title}
+                    phone={feature.phone}
+                    index={index}
+                    progress={activeIndex}
+                    isFirst={index === 0}
+                  />
+                ))}
               </div>
             </div>
 
@@ -186,13 +159,13 @@ function FeaturePanel({
   );
 }
 
-function FeatureScreenImage({
-  screenshot,
+function FeaturePhone({
+  phone,
   index,
   progress,
   isFirst,
 }: {
-  screenshot: string;
+  phone: string;
   index: number;
   progress: MotionValue<number>;
   isFirst: boolean;
@@ -204,9 +177,9 @@ function FeatureScreenImage({
 
   return (
     <motion.img
-      src={screenshot}
+      src={phone}
       alt="App screenshot"
-      className={`w-full h-auto block ${isFirst ? "relative" : "absolute inset-0"}`}
+      className={`w-[280px] sm:w-[300px] h-auto ${isFirst ? "relative" : "absolute"}`}
       style={{ opacity }}
       loading="lazy"
     />
