@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { AnimatedHeadline, FadeUp } from "./AnimatedText";
-import PhoneMockup from "./PhoneMockup";
+import PhoneMockup from "@/components/PhoneMockup";
 
 export default function Hero() {
   return (
@@ -82,10 +82,7 @@ export default function Hero() {
               delay: 0.3,
             }}
           >
-            <PhoneMockup
-              screenTexturePath="/screenshots/routine.png"
-              rotation={[0.1, -0.25, 0.02]}
-            />
+            <PhoneMockup screenTexturePath="/screenshots/routine.png" />
           </motion.div>
         </div>
       </div>

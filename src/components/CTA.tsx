@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { AnimatedHeadline, FadeUp } from "./AnimatedText";
-import PhoneMockup from "./PhoneMockup";
+import PhoneMockup from "@/components/PhoneMockup";
 
 export default function CTA() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-sage-900 via-sage-950 to-sage-900">
+    <section className="relative lg:min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-sage-900 via-sage-950 to-sage-900">
       {/* Blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="blob absolute top-1/4 -left-32 w-[500px] h-[500px] rounded-full bg-sage-700/20 blur-3xl" />
@@ -57,7 +57,7 @@ export default function CTA() {
 
           {/* Right — Phone */}
           <motion.div
-            className="relative h-[400px] sm:h-[500px] hidden lg:block"
+            className="relative hidden lg:flex items-center justify-center"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -68,10 +68,7 @@ export default function CTA() {
               stiffness: 80,
             }}
           >
-            <PhoneMockup
-              screenTexturePath="/screenshots/routine.png"
-              rotation={[0.05, 0.2, -0.02]}
-            />
+            <PhoneMockup screenTexturePath="/screenshots/routine.png" size="sm" />
           </motion.div>
         </div>
       </div>

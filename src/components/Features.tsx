@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { type MotionValue, motion, useScroll, useTransform } from "framer-motion";
-import PhoneMockup from "./PhoneMockup";
 import { AnimatedHeadline, FadeUp } from "./AnimatedText";
 
 const features = [
@@ -91,16 +90,43 @@ export default function Features() {
                 ))}
               </div>
 
-              {/* Right — Phone with transitioning screens */}
-              <div className="relative h-[500px] sm:h-[600px] hidden lg:block">
-                {features.map((feature, index) => (
-                  <FeaturePhone
-                    key={feature.title}
-                    screenshot={feature.screenshot}
-                    index={index}
-                    progress={activeIndex}
-                  />
-                ))}
+              {/* Right — Phone with crossfading screenshots */}
+              <div className="relative h-[500px] sm:h-[600px] hidden lg:flex items-center justify-center">
+                <div
+                  className="relative w-[280px] sm:w-[300px]"
+                  style={{ perspective: "1000px" }}
+                >
+                  <div
+                    className="relative bg-[#1a1a1a] rounded-[3rem] p-[10px] shadow-2xl shadow-sage-950/30"
+                    style={{
+                      transform: "rotateY(-6deg) rotateX(2deg)",
+                      transformStyle: "preserve-3d",
+                    }}
+                  >
+                    {/* Dynamic Island */}
+                    <div className="absolute top-[18px] left-1/2 -translate-x-1/2 w-[90px] h-[28px] bg-black rounded-full z-10" />
+
+                    {/* Screen with crossfading images */}
+                    <div className="relative rounded-[2.4rem] overflow-hidden bg-black">
+                      {features.map((feature, index) => (
+                        <FeatureScreenImage
+                          key={feature.title}
+                          screenshot={feature.screenshot}
+                          index={index}
+                          progress={activeIndex}
+                          isFirst={index === 0}
+                        />
+                      ))}
+                    </div>
+
+                    {/* Side button (power) */}
+                    <div className="absolute -right-[3px] top-[120px] w-[3px] h-[60px] bg-[#2a2a2a] rounded-r-sm" />
+
+                    {/* Side buttons (volume) */}
+                    <div className="absolute -left-[3px] top-[100px] w-[3px] h-[35px] bg-[#2a2a2a] rounded-l-sm" />
+                    <div className="absolute -left-[3px] top-[145px] w-[3px] h-[35px] bg-[#2a2a2a] rounded-l-sm" />
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -160,14 +186,16 @@ function FeaturePanel({
   );
 }
 
-function FeaturePhone({
+function FeatureScreenImage({
   screenshot,
   index,
   progress,
+  isFirst,
 }: {
   screenshot: string;
   index: number;
   progress: MotionValue<number>;
+  isFirst: boolean;
 }) {
   const opacity = useTransform(progress, (v: number) => {
     const distance = Math.abs(v - index);
@@ -175,12 +203,13 @@ function FeaturePhone({
   });
 
   return (
-    <motion.div className="absolute inset-0" style={{ opacity }}>
-      <PhoneMockup
-        screenTexturePath={screenshot}
-        rotation={[0.1, -0.25, 0.02]}
-      />
-    </motion.div>
+    <motion.img
+      src={screenshot}
+      alt="App screenshot"
+      className={`w-full h-auto block ${isFirst ? "relative" : "absolute inset-0"}`}
+      style={{ opacity }}
+      loading="lazy"
+    />
   );
 }
 
