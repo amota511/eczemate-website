@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="absolute inset-0 grain opacity-30 pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 lg:py-0 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 lg:py-24 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left — Copy */}
           <div className="max-w-xl">
@@ -69,9 +69,9 @@ export default function Hero() {
             </FadeUp>
           </div>
 
-          {/* Right — 3D Phone */}
+          {/* Right — Phone */}
           <motion.div
-            className="relative h-[500px] sm:h-[600px] lg:h-[700px]"
+            className="relative flex items-center justify-center"
             initial={{ opacity: 0, y: 60, rotateY: -10 }}
             animate={{ opacity: 1, y: 0, rotateY: 0 }}
             transition={{
