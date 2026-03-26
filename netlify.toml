@@ -3,6 +3,11 @@
   publish = "out"
 
 [[redirects]]
+  from = "/r/:code"
+  to = "/r?code=:code"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
